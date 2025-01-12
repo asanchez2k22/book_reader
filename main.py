@@ -33,6 +33,8 @@ def camera_capture():
     video.set(4, 480)
     time.sleep(1)
 
+    isbn = ""
+
     # Distinguish between web-app and local app for testing
     if test_mode:
         while True:

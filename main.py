@@ -190,14 +190,15 @@ else:
 
             isbn = camera_capture()
 
-        book_info = fetch_book_info(isbn, book_API)
-        title, author = filter_book_info(book_info, book_API)
+        if isbn:
+            book_info = fetch_book_info(isbn, book_API)
+            title, author = filter_book_info(book_info, book_API)
 
-        st.write(f"Title: {title}")
-        st.write(f"Author: {', '.join(author)}")
+            st.write(f"Title: {title}")
+            st.write(f"Author: {', '.join(author)}")
 
-        print(f"Title: {title}")
-        print(f"Author: {', '.join(author)}")
+            print(f"Title: {title}")
+            print(f"Author: {', '.join(author)}")
 
 exit()
 

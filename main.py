@@ -190,7 +190,7 @@ else:
 
             isbn = camera_capture()
 
-        if isbn:
+        if isbn != "":
             book_info = fetch_book_info(isbn, book_API)
             title, author = filter_book_info(book_info, book_API)
 
